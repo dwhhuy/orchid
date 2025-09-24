@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lan Hồ Điệp Cao Cấp - Vẻ Đẹp Tinh Tế</title>
+    <meta name="description" content="Chuyên cung cấp lan hồ điệp cao cấp, đa dạng chủng loại với chất lượng tuyệt vời. Liên hệ Zalo hoặc điện thoại để đặt hàng.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Cuong Van Orchid</h1>
+                    <span>Lan Hồ Điệp Cao Cấp</span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#home">Trang chủ</a></li>
+                        <li><a href="#products">Sản phẩm</a></li>
+                        <li><a href="#about">Về chúng tôi</a></li>
+                        <li><a href="#contact">Liên hệ</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact">
+                    <a href="tel:+84123456789" class="contact-btn phone-btn">
+                        <span class="icon">📞</span>
+                        0123 456 789
+                    </a>
+                    <a href="https://zalo.me/0123456789" class="contact-btn zalo-btn" target="_blank">
+                        <span class="icon">💬</span>
+                        Zalo
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-image"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Lan Hồ Điệp Cao Cấp</h1>
+                <h2 class="hero-subtitle">Vẻ Đẹp Tinh Tế Cho Không Gian Của Bạn</h2>
+                <p class="hero-description">
+                    Khám phá bộ sưu tập lan hồ điệp đa dạng với chất lượng tuyệt vời. 
+                    Mỗi cây lan đều được chăm sóc tỉ mỉ để mang đến vẻ đẹp hoàn hảo.
+                </p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary">Xem bộ sưu tập</a>
+                    <a href="#contact" class="btn btn-secondary">Liên hệ đặt hàng</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sản Phẩm Của Chúng Tôi</h2>
+                <p>Hoa lan cao cấp và hoa trang trí sự kiện đặc biệt</p>
+            </div>
+            
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="hoa-lan">Hoa Lan</button>
+                <button class="filter-btn" data-filter="su-kien">Hoa Sự Kiện</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+
+            <div class="products-cta">
+                <h3>Quan tâm đến sản phẩm nào?</h3>
+                <p>Liên hệ với chúng tôi để được tư vấn và đặt hàng</p>
+                <div class="cta-buttons">
+                    <a href="https://zalo.me/0123456789" class="btn btn-primary" target="_blank">
+                        <span class="icon">💬</span>
+                        Chat Zalo
+                    </a>
+                    <a href="tel:+84123456789" class="btn btn-secondary">
+                        <span class="icon">📞</span>
+                        Gọi ngay
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tại Sao Chọn Chúng Tôi?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌸</div>
+                    <h3>Chất Lượng Cao</h3>
+                    <p>Lan hồ điệp được chọn lọc kỹ càng, đảm bảo sức khỏe và vẻ đẹp tuyệt vời</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Tư Vấn Chuyên Nghiệp</h3>
+                    <p>Đội ngũ có kinh nghiệm sẽ tư vấn giúp bạn chọn lan phù hợp nhất</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Giao Hàng Tận Nơi</h3>
+                    <p>Đóng gói cẩn thận và giao hàng nhanh chóng đến tận nhà</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💝</div>
+                    <h3>Chăm Sóc Sau Bán</h3>
+                    <p>Hướng dẫn chăm sóc chi tiết và hỗ trợ khi cần thiết</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Care Tips Section -->
+    <section class="care-tips">
+        <div class="container">
+            <div class="care-content">
+                <div class="care-text">
+                    <h2>Hướng Dẫn Chăm Sóc Lan Hồ Điệp</h2>
+                    <div class="tips-list">
+                        <div class="tip-item">
+                            <span class="tip-icon">💧</span>
+                            <div>
+                                <h4>Tưới nước đúng cách</h4>
+                                <p>Tưới 1-2 lần/tuần, tránh để nước đọng ở gốc</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-icon">☀️</span>
+                            <div>
+                                <h4>Ánh sáng phù hợp</h4>
+                                <p>Đặt nơi có ánh sáng gián tiếp, tránh ánh nắng trực tiếp</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-icon">🌡️</span>
+                            <div>
+                                <h4>Nhiệt độ lý tưởng</h4>
+                                <p>Nhiệt độ 18-25°C, độ ẩm 50-70%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-outline">Tư vấn chi tiết</a>
+                </div>
+                <div class="care-image">
+                    <img src="images/care-guide.jpg" alt="Hướng dẫn chăm sóc lan" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Liên Hệ Đặt Hàng</h2>
+                <p>Chúng tôi luôn sẵn sàng tư vấn và hỗ trợ bạn</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>Zalo</h4>
+                            <a href="https://zalo.me/0123456789" target="_blank">0123 456 789</a>
+                            <p>Chat trực tiếp để được tư vấn nhanh nhất</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Điện thoại</h4>
+                            <a href="tel:+84123456789">0123 456 789</a>
+                            <p>Gọi trực tiếp trong giờ hành chính</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Địa chỉ</h4>
+                            <p>123 Đường ABC, Quận XYZ, TP.HCM</p>
+                            <p>Mở cửa: 8:00 - 18:00 (Thứ 2 - Chủ nhật)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Gửi yêu cầu tư vấn</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Họ và tên *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Số điện thoại *" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Nội dung cần tư vấn" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gửi yêu cầu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Cuong Van Orchid</h3>
+                    <p>Chuyên cung cấp lan hồ điệp cao cấp với chất lượng tuyệt vời và dịch vụ chăm sóc khách hàng tận tâm.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <p>📞 0123 456 789</p>
+                    <p>💬 Zalo: 0123456789</p>
+                    <p>📧 info@orchidgarden.vn</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Giờ làm việc</h4>
+                    <p>Thứ 2 - Chủ nhật</p>
+                    <p>8:00 - 18:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cuong Van Orchid. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Contact Bar -->
+    <div class="mobile-contact-bar">
+        <a href="tel:+84123456789" class="mobile-contact-btn phone">
+            <span class="icon">📞</span>
+            <span>Gọi</span>
+        </a>
+        <a href="https://zalo.me/0123456789" class="mobile-contact-btn zalo" target="_blank">
+            <span class="icon">💬</span>
+            <span>Zalo</span>
+        </a>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+            <div class="lightbox-media-container">
+                <img id="lightbox-image" src="" alt="">
+                <video id="lightbox-video" controls style="display: none;">
+                    <source src="" type="video/mp4">
+                </video>
+            </div>
+            <div class="lightbox-counter">
+                <span id="lightbox-current">1</span> / <span id="lightbox-total">1</span>
+            </div>
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+                <button class="btn btn-primary" onclick="openContactModal()">Liên hệ đặt hàng</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
