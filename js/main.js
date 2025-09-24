@@ -6,25 +6,41 @@ let filteredProducts = [];
 let currentLightboxIndex = 0;
 let currentLightboxProducts = [];
 
-// DOM Elements
-const productsGrid = document.getElementById('productsGrid');
-const filterButtons = document.querySelectorAll('.filter-btn');
-const lightbox = document.getElementById('lightbox');
-const lightboxImage = document.getElementById('lightbox-image');
-const lightboxVideo = document.getElementById('lightbox-video');
-const lightboxTitle = document.getElementById('lightbox-title');
-const lightboxDescription = document.getElementById('lightbox-description');
-const lightboxClose = document.querySelector('.lightbox-close');
-const lightboxPrev = document.getElementById('lightboxPrev');
-const lightboxNext = document.getElementById('lightboxNext');
-const lightboxCurrent = document.getElementById('lightbox-current');
-const lightboxTotal = document.getElementById('lightbox-total');
-const lightboxMediaContainer = document.querySelector('.lightbox-media-container');
-const contactForm = document.getElementById('contactForm');
-const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+// DOM Elements - will be initialized after DOM loads
+let productsGrid, filterButtons, lightbox, lightboxImage, lightboxVideo, lightboxTitle, lightboxDescription;
+let lightboxClose, lightboxPrev, lightboxNext, lightboxCurrent, lightboxTotal, lightboxMediaContainer;
+let contactForm, mobileMenuToggle;
+
+// Initialize DOM elements
+function initializeDOMElements() {
+    productsGrid = document.getElementById('productsGrid');
+    filterButtons = document.querySelectorAll('.filter-btn');
+    lightbox = document.getElementById('lightbox');
+    lightboxImage = document.getElementById('lightbox-image');
+    lightboxVideo = document.getElementById('lightbox-video');
+    lightboxTitle = document.getElementById('lightbox-title');
+    lightboxDescription = document.getElementById('lightbox-description');
+    lightboxClose = document.querySelector('.lightbox-close');
+    lightboxPrev = document.getElementById('lightboxPrev');
+    lightboxNext = document.getElementById('lightboxNext');
+    lightboxCurrent = document.getElementById('lightbox-current');
+    lightboxTotal = document.getElementById('lightbox-total');
+    lightboxMediaContainer = document.querySelector('.lightbox-media-container');
+    contactForm = document.getElementById('contactForm');
+    mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+}
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing...');
+    
+    // Initialize DOM elements first
+    initializeDOMElements();
+    
+    // Check if elements exist
+    console.log('Products grid found:', !!productsGrid);
+    console.log('Filter buttons found:', filterButtons ? filterButtons.length : 0);
+    
     initializeProducts();
     setupEventListeners();
     setupScrollAnimations();
@@ -159,16 +175,30 @@ function initializeProducts() {
         });
     });
 
+    // Make products globally accessible
     window.products = products;
     filteredProducts = products;
+    
+    console.log('Initialized products:', products.length);
+    console.log('Categories found:', [...new Set(products.map(p => p.category))]);
+    
     renderProducts();
 }
 
 // Render products to the grid
 function renderProducts() {
-    if (!productsGrid) return;
+    if (!productsGrid) {
+        console.error('Products grid element not found!');
+        return;
+    }
 
+    console.log('Rendering products:', filteredProducts.length);
     productsGrid.innerHTML = '';
+    
+    if (filteredProducts.length === 0) {
+        productsGrid.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 2rem;">Không tìm thấy sản phẩm nào.</p>';
+        return;
+    }
     
     filteredProducts.forEach(product => {
         const productCard = createProductCard(product);
@@ -207,11 +237,16 @@ function createProductCard(product) {
 
 // Filter products by category
 function filterProducts(category) {
+    console.log('Filtering by category:', category);
+    console.log('Total products:', window.products ? window.products.length : 0);
+    
     if (category === 'all') {
-        filteredProducts = products;
+        filteredProducts = window.products || [];
     } else {
-        filteredProducts = products.filter(product => product.category === category);
+        filteredProducts = (window.products || []).filter(product => product.category === category);
     }
+    
+    console.log('Filtered products:', filteredProducts.length);
     renderProducts();
 }
 
