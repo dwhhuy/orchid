@@ -222,7 +222,6 @@ function createProductCard(product) {
         <div class="product-info">
             <h3 class="product-title">${product.name}</h3>
             <p class="product-description">${product.description}</p>
-            <button class="product-cta">Liên hệ để đặt hàng</button>
         </div>
     `;
 
