@@ -398,7 +398,7 @@ function handleContactForm(e) {
     
     // Optional: Open Zalo with pre-filled message
     const zaloMessage = encodeURIComponent(`Xin chào! Tôi là ${name}, số điện thoại ${phone}. ${message || 'Tôi quan tâm đến sản phẩm lan hồ điệp của bạn.'}`);
-    window.open(`https://zalo.me/0123456789?message=${zaloMessage}`, '_blank');
+    window.open(`https://zalo.me/0354497871?message=${zaloMessage}`, '_blank');
 }
 
 // Toggle mobile menu
